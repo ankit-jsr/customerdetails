@@ -1,0 +1,21 @@
+##
+Objective: Search customer orders by entering basic details like:
+    1. Customer phone
+    2. Customer email ID
+    3. Order ID
+
+Approach: Identify what is being entered - order id, phone number or email id. Once identified look up the correct table and extract customer information
+If phone number - get customer details using the phone number - check for shipping or billing numbers
+If email id - check for customer, shipping or billing email ID
+if order id - get the order id and reverse map the customer information
+
+Once customer information is obtained - get all list of orders for that customer. If customer account doesn't exist, then get
+the list of orders associated with the given phone number
+
+Once the list of orders is generated, check the order table to get required details
+
+Modules:
+1. decode_input() - understands whether input given is phone, email or order id
+2. local_db() - creates a copy of the order and customer database locally for faster lookups
+2. fetch_customer_details()
+2.
