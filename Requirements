@@ -15,7 +15,10 @@ the list of orders associated with the given phone number
 Once the list of orders is generated, check the order table to get required details
 
 Modules:
-1. decode_input() - understands whether input given is phone, email or order id
-2. local_db() - creates a copy of the order and customer database locally for faster lookups
-2. fetch_customer_details()
-2.
+1. get_decode_input() - gets and understands whether input given is phone, email or order id
+2. create_local_db() - creates a copy of the order and customer database locally for faster lookups
+3. is_input_valid() - checks if input is valid, i.e., it exists
+3. get_customer_details() - fetches customer details from customer table
+4. get_list_of_orders() - fetches list of orders if customer account doesn't exist
+5. get_order_details() - fetches order parameters to be displayed
+6. display_result() - displays the final output
